@@ -2,11 +2,12 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.6rem;
-    padding: 8px 16px;
     min-width: 100px;
-    font-weight: 700;
+    padding: 9px 16px;
     border-radius: 4px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
     background-color: var(--white);
     border: 1px solid transparent;
     user-select: none;
@@ -16,8 +17,8 @@
     }
 
     &.disabled {
+        pointer-events: none;
         opacity: 0.5;
-        cursor: not-allowed;
     }
 }
 
@@ -32,7 +33,7 @@
     text-align: center;
 }
 
-// Types
+// Button types
 .rounded {
     border-radius: 999px;
     box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
@@ -57,7 +58,7 @@
 
 .outline {
     color: var(--primary);
-    border-color: var(--primary);
+    border-color: currentColor;
 
     &:hover {
         border-color: currentColor;
@@ -66,19 +67,18 @@
 }
 
 .text {
-    &:hover{
+    &:hover {
         text-decoration: underline;
-    };
+    }
 }
-// Disabled
 
-// Size
+// Button sizes
 .small {
     min-width: 88px;
     padding: 4px 16px;
 }
 
 .large {
-    min-width: 140px;
     padding: 14px 16px;
+    min-width: 140px;
 }
